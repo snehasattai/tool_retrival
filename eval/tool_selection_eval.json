@@ -1,0 +1,33 @@
+[
+  {"query": "Create an invoice for $50 to bob@example.com", "category": "invoicing", "expected_tool": "create_invoice"},
+  {"query": "Send that draft invoice INV-1001 to the customer", "category": "invoicing", "expected_tool": "send_invoice"},
+  {"query": "Which invoices are overdue right now?", "category": "invoicing", "expected_tool": "list_overdue_invoices"},
+  {"query": "Cancel invoice INV-2044, the customer backed out", "category": "invoicing", "expected_tool": "cancel_invoice"},
+  {"query": "Can you nudge bob about the invoice he hasn't paid?", "category": "invoicing", "expected_tool": "remind_invoice"},
+  {"query": "I got paid in cash for invoice INV-3001, mark it paid", "category": "invoicing", "expected_tool": "mark_invoice_paid"},
+  {"query": "Give me a QR code customers can scan to pay this invoice", "category": "invoicing", "expected_tool": "generate_invoice_qr_code"},
+  {"query": "Make a copy of last month's invoice to bill again", "category": "invoicing", "expected_tool": "duplicate_invoice"},
+
+  {"query": "Send $25 to carol@example.com for design work", "category": "payments", "expected_tool": "send_payment"},
+  {"query": "Ask dave@example.com to pay me $100 for the consulting", "category": "payments", "expected_tool": "request_payment"},
+  {"query": "What's my current USD balance?", "category": "payments", "expected_tool": "get_balance"},
+  {"query": "Refund that $90 payment to bob, he never got the item", "category": "payments", "expected_tool": "refund_payment"},
+  {"query": "Move $500 from my bank account into PayPal", "category": "payments", "expected_tool": "add_funds"},
+  {"query": "Withdraw $200 to my linked bank account", "category": "payments", "expected_tool": "withdraw_funds"},
+  {"query": "Pay these five contractors $50 each in one go", "category": "payments", "expected_tool": "create_payout_batch"},
+  {"query": "Is erin@example.com a verified PayPal recipient?", "category": "payments", "expected_tool": "verify_recipient"},
+
+  {"query": "Is there an open dispute from user_123?", "category": "disputes", "expected_tool": "list_disputes_by_customer"},
+  {"query": "Give me the full details on dispute DSP-9001", "category": "disputes", "expected_tool": "get_dispute"},
+  {"query": "What evidence do I need to fight this chargeback?", "category": "disputes", "expected_tool": "get_dispute_evidence_requirements"},
+  {"query": "I want to side with the buyer and refund them on this dispute", "category": "disputes", "expected_tool": "accept_dispute_claim"},
+  {"query": "Attach this shipping receipt as evidence on the dispute", "category": "disputes", "expected_tool": "upload_dispute_evidence"},
+  {"query": "This dispute wasn't resolved fairly, I want to appeal it", "category": "disputes", "expected_tool": "appeal_dispute_decision"},
+
+  {"query": "What was my total sales volume last month?", "category": "reports", "expected_tool": "get_total_sales_volume"},
+  {"query": "Who are my top 5 customers by revenue this quarter?", "category": "reports", "expected_tool": "get_top_customers"},
+  {"query": "How much have I paid in PayPal fees this month?", "category": "reports", "expected_tool": "get_fee_summary"},
+  {"query": "What percentage of my transactions end up disputed?", "category": "reports", "expected_tool": "get_dispute_rate"},
+  {"query": "Break my sales down by currency for last quarter", "category": "reports", "expected_tool": "get_currency_breakdown"},
+  {"query": "What's the average value of my transactions?", "category": "reports", "expected_tool": "get_average_transaction_value"}
+]
